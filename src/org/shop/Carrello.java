@@ -34,7 +34,7 @@ public class Carrello {
                 smartphoneMemory = Integer.parseInt(keyboard.nextLine());
                 Smartphone smartphone = new Smartphone(productName,productPrice,produtIva,smartphoneIMEI,smartphoneMemory);
                 carrello[i] = smartphone;
-            } if (productType.equals("televisore")){
+            } else if (productType.equals("televisore")){
                 System.out.println("Dimensione TV:");
                 tvSize = Integer.parseInt(keyboard.nextLine());
                 System.out.println("Smart:");

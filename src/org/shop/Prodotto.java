@@ -52,7 +52,7 @@ public class Prodotto {
         return prezzo + prezzo * iva;
     }
     public String getFullInfo(){
-        return "Codice: " + getCode() + "Nome prodotto: "+ getNome()  + "Prezzo: "+ getPrezzo() + "Iva: "+ getIva()+
-                "Prezzo totale: " + getPrezzoConIva();
+        return "Codice: " + getCode() + " Nome prodotto: "+ getNome()  + " Prezzo: "+ getPrezzo() + " Iva: "+ getIva()+
+                " Prezzo totale: " + getPrezzoConIva();
     }
 }

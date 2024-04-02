@@ -19,14 +19,14 @@ public class Carrello {
         int productNumber = Integer.parseInt(keyboard.nextLine());
         Prodotto[] carrello = new Prodotto[productNumber];
         for (int i = 0; i < carrello.length; i++) {
+            System.out.println("Il prodotto è uno smartphone, un televisore o una cuffia?");
+            String productType = keyboard.nextLine().toLowerCase();
             System.out.println("Nome prodotto:");
             productName = keyboard.nextLine();
             System.out.println("Prezzo:");
             productPrice= Double.parseDouble(keyboard.nextLine().replaceAll(",","."));
             System.out.println("Iva:");
             produtIva= Double.parseDouble(keyboard.nextLine().replaceAll(",","."));
-            System.out.println("Smartphone, televisore o cuffia?");
-            String productType = keyboard.nextLine().toLowerCase();
             if (productType.equals("smartphone")){
                 System.out.println("IMEI:");
                 smartphoneIMEI = Integer.parseInt(keyboard.nextLine());
@@ -53,7 +53,7 @@ public class Carrello {
         }
 
         for (Prodotto singleProduct : carrello) {
-            System.out.println(singleProduct);
+            System.out.println(singleProduct.getFullInfo());
         }
         keyboard.close();
     }

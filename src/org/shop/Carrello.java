@@ -8,12 +8,6 @@ public class Carrello {
         String productName;
         double productPrice;
         double produtIva;
-        int smartphoneIMEI;
-        int smartphoneMemory;
-        int tvSize;
-        boolean isSmart;
-        String headphoneColor;
-        String wirlessOrWired;
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Quanti prodotti hai preso?");
         int productNumber = Integer.parseInt(keyboard.nextLine());
@@ -29,24 +23,24 @@ public class Carrello {
             produtIva= Double.parseDouble(keyboard.nextLine().replaceAll(",","."));
             if (productType.equals("smartphone")){
                 System.out.println("IMEI:");
-                smartphoneIMEI = Integer.parseInt(keyboard.nextLine());
+                int smartphoneIMEI = Integer.parseInt(keyboard.nextLine());
                 System.out.println("Memoria:");
-                smartphoneMemory = Integer.parseInt(keyboard.nextLine());
+                int smartphoneMemory = Integer.parseInt(keyboard.nextLine());
                 Smartphone smartphone = new Smartphone(productName,productPrice,produtIva,smartphoneIMEI,smartphoneMemory);
                 carrello[i] = smartphone;
             } else if (productType.equals("televisore")){
                 System.out.println("Dimensione TV:");
-                tvSize = Integer.parseInt(keyboard.nextLine());
+                int tvSize = Integer.parseInt(keyboard.nextLine());
                 System.out.println("Smart:");
-                isSmart = Boolean.parseBoolean(keyboard.nextLine());
+                boolean isSmart = Boolean.parseBoolean(keyboard.nextLine());
                 Televisori televisori = new Televisori(productName,productPrice,produtIva,tvSize, isSmart);
                 carrello[i] = televisori;
 
             } else if (productType.equals("cuffia")){
                 System.out.println("Colore cuffie:");
-                headphoneColor = keyboard.nextLine();
+                String headphoneColor = keyboard.nextLine();
                 System.out.println("Wirless o cablate:");
-                wirlessOrWired = keyboard.nextLine();
+                String wirlessOrWired = keyboard.nextLine();
                 Cuffie cuffie = new Cuffie(productName,productPrice,produtIva,headphoneColor, wirlessOrWired);
                 carrello[i] = cuffie;
             }

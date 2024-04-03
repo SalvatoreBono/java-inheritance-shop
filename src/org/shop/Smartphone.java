@@ -17,4 +17,8 @@ public class Smartphone extends Prodotto {
         return memoria;
     }
 
+    @Override
+    public String getFullInfo() {
+        return super.getFullInfo() + " IMEI: " +getIMEI() + " Memoria: "+ getMemoria() +"GB";
+    }
 }

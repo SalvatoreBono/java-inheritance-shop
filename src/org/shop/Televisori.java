@@ -18,4 +18,12 @@ public class Televisori extends Prodotto {
     public boolean isSmart() {
         return smart;
     }
+
+    @Override
+    public String getFullInfo() {
+        return super.getFullInfo() + " Dimensioni: "+ getDimensioni()+" pollici " + (isSmart() ? "la TV è smart" :
+                "la TV " +
+                "non è " +
+                "smart");
+    }
 }

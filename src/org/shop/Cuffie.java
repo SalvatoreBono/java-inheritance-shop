@@ -17,4 +17,9 @@ public class Cuffie extends Prodotto{
     public String getWirlessOrCablate() {
         return WirlessOrCablate;
     }
+
+    @Override
+    public String getFullInfo() {
+        return super.getFullInfo() + " Colore: " + getColor()+ " Sono: "+getWirlessOrCablate();
+    }
 }
